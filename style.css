@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+}
+
+.wrapper{
+    background-image: url("./77.jpg");
+    background-size: 100vw 100vh;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    margin-top: 65vh;
+    margin-left: 8px;
+    margin-right: 300px;
+}
+
+.body{
+    width: 300px;
+    position: relative;
+    animation-name: car;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.tyres{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 27px;
+    width: 245px;
+    top: 81px;
+    animation-name: car;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.front{
+    width: 50px;
+    left: 100px;
+    animation-name: rotate;
+    animation-duration: 2.5s;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+
+.back{
+    width: 50px;
+    animation-name: rotate;
+    animation-duration: 2.5s;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+
+/* Car Animation */
+@keyframes car {
+    from{
+        left: 0vw;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+/* Tyre Animation */
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-height: 900px){
+
+    .container{
+        margin-top: 68vh;
+    }
+}
+
+@media (max-height: 620px){
+
+    .container{
+        margin-top: 58vh;
+    }
+}
